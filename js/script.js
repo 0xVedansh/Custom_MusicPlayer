@@ -9,7 +9,10 @@ playPauseBtn = wrapper.querySelector(".play-pause"),
 prevBtn = wrapper.querySelector("#prev"),
 nextBtn = wrapper.querySelector("#next"),
 progressArea = wrapper.querySelector(".progress-area"),
-progressBar = wrapper.querySelector(".progress-bar");
+progressBar = wrapper.querySelector(".progress-bar"),
+musicList = wrapper.querySelector(".music-list")
+showMoreBtn = musicList.querySelector("#more-music"),
+hideMusicBtn = musicList.querySelector("#close");
 
 let musicIndex = 20;
 
@@ -131,7 +134,7 @@ repeatBtn.addEventListener("click", ()=> {
 
         case "repeat_one": // if this icon is repeat_one then change it to shuffle.
             repeatBtn.innerText = "shuffle";
-            repeatBtn.setAttribute("title", "Playback Shuffle");
+            repeatBtn.setAttribute("title", "Playback Shuffled");
             break;
 
         case "shuffle": // if this icon is shuffle then change it to repeat again.
@@ -142,6 +145,10 @@ repeatBtn.addEventListener("click", ()=> {
 });
 
 //above we just changed the icon, now let's work on what to do after the song is ended
+mainAudio.addEventListener("ended", ()=> {
+    // we'll do according to the icon means if user has set icon to loop song thwn we'll repeat the current song 
+    // and will do further accordingly
+
     let getText = repeatBtn.innerText; // getting innerText of icon
     // let's do different changes on different icon using switch
     switch(getText){
@@ -149,15 +156,23 @@ repeatBtn.addEventListener("click", ()=> {
         nextMusic();
         break;
 
-        case "repeat_one": // if icon is repeat_one then we'll change the current time of the playing song to 0. 
+        case "repeat_one": // if icon is repeat_one then we'll change the current time of the playing song to 0. Sp, 
+        // that song will play from the beginning again.
         mainAudio.currentTime = 0;
-        loadMusic(indexNumb);
+        loadMusic(musicIndex);
+        playMusic(); // calling playMusic function.
         break;
 
         case "shuffle": 
         // generating random index between the max range of array length
-        let randIndex = Math.floor((math.random() * allMusic.length) + 1);
+        let randIndex = Math.floor((Math.random() * allMusic.length) + 1);
         do{
-            let randIndex = Math.floor((math.random() * allMusic.length) + 1);
-        }while(randIndex)
-    } 
+            let randIndex = Math.floor((Math.random() * allMusic.length) + 1);
+        }while(musicIndex == randIndex) // this loop run until the next random number won't be the same of 
+        // current music index.
+        musicIndex = randIndex; // passing randIndex to musicIndex. So, the random song will play.
+        loadMusic(musicIndex); // calling loadMusic function.
+        playMusic(); // calling playMusic function.
+        break;
+    }
+}); 
