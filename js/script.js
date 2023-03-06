@@ -8,6 +8,7 @@ mainAudio = wrapper.querySelector("#main-audio"),
 playPauseBtn = wrapper.querySelector(".play-pause"),
 prevBtn = wrapper.querySelector("#prev"),
 nextBtn = wrapper.querySelector("#next"),
+progressArea = wrapper.querySelector(".progress-area"),
 progressBar = wrapper.querySelector(".progress-bar");
 
 let musicIndex = 20;
@@ -104,3 +105,59 @@ mainAudio.addEventListener("timeupdate", (e)=> {
         }
         musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
 });
+
+// let's update playing song current time according to the progress bar width
+progressArea.addEventListener("click", (e)=> {
+    let progressWidthval = progressArea.clientWidth; // getting width of progress bar
+    let clickedOffSetX = e.offsetX // getting offset x value
+    let songDuration = mainAudio.duration; // getting song total duration
+
+    mainAudio.currentTime = (clickedOffSetX / progressWidthval) * songDuration;
+    playMusic();
+});
+
+// let's work on the repeat, shuffle song according to the icon
+const repeatBtn = wrapper.querySelector("#repeat-plist");
+repeatBtn.addEventListener("click", ()=> {
+    // first we'll get the innerText of the icon and then change accordingly
+    let getText = repeatBtn.innerText; // getting innerText of icon 
+    // let's do different changes on different icon click using switch
+
+    switch(getText){
+        case "repeat": // if this icon is repeat then change it to repeat_one.
+            repeatBtn.innerText = "repeat_one";
+            repeatBtn.setAttribute("title", "Song Looped");   
+            break;
+
+        case "repeat_one": // if this icon is repeat_one then change it to shuffle.
+            repeatBtn.innerText = "shuffle";
+            repeatBtn.setAttribute("title", "Playback Shuffle");
+            break;
+
+        case "shuffle": // if this icon is shuffle then change it to repeat again.
+            repeatBtn.innerText = "repeat";
+            repeatBtn.setAttribute("title", "Playlist Looped");
+            break;
+    }
+});
+
+//above we just changed the icon, now let's work on what to do after the song is ended
+    let getText = repeatBtn.innerText; // getting innerText of icon
+    // let's do different changes on different icon using switch
+    switch(getText){
+        case "repeat": // if this icon is repeat, then simply we call the nextMusic function. So, the next song will play.
+        nextMusic();
+        break;
+
+        case "repeat_one": // if icon is repeat_one then we'll change the current time of the playing song to 0. 
+        mainAudio.currentTime = 0;
+        loadMusic(indexNumb);
+        break;
+
+        case "shuffle": 
+        // generating random index between the max range of array length
+        let randIndex = Math.floor((math.random() * allMusic.length) + 1);
+        do{
+            let randIndex = Math.floor((math.random() * allMusic.length) + 1);
+        }while(randIndex)
+    } 
