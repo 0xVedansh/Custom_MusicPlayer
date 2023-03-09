@@ -206,7 +206,7 @@ for(let i=0; i<allMusic.length; i++){
                 </li>`;
     ulTag.insertAdjacentHTML("beforeend", liTag);
 
-    let liAudioDuaration = ulTag.querySelector(`#${allMusic[i].src}`);
+    let liAudioDuration = ulTag.querySelector(`#${allMusic[i].src}`);
     let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`);
 
     liAudioTag.addEventListener("loadeddata", ()=> {
@@ -216,9 +216,9 @@ for(let i=0; i<allMusic.length; i++){
         if(totalSec < 10){ // adding 0 if sec is less than 10
             totalSec = `0${totalSec}`;
         }
-        liAudioDuaration.innerText = `${totalMin}:${totalSec}`;
+        liAudioDuration.innerText = `${totalMin}:${totalSec}`;
         // adding t-duration attribute which we'll use below 
-        liAudioDuaration.setAttribute("t-duration",`${totalMin}:${totalSec}`);
+        liAudioDuration.setAttribute("t-duration",`${totalMin}:${totalSec}`);
     });
 }
 
