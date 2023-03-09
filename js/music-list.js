@@ -3,146 +3,146 @@ let allMusic = [
         name: "Blinding Lights",
         artist: "The Weeknd",
         img: "blindinglights",
-        src: "The Weeknd - Blinding Lights"
+        src: "TheWeeknd-BlindingLights"
     },
     
     {
         name: "Sakhiyaan",
         artist: "Maninder Buttar",
         img: "sakhiyaan",
-        src: "Sakhiyaan - Maninder Buttar"
+        src: "Sakhiyaan-ManinderButtar"
     },
     
     {
         name: "A Thousand Years",
         artist: "Christina Perri",
         img: "athousandyears",
-        src: "Christina Perri - A Thousand Years"
+        src: "ChristinaPerri-AThousandYears"
     },
     
     {
         name: "Chaar Chudiyaan",
         artist: "Nikk",
         img: "chaarchudiyaan",
-        src: "Chaar Chudiyaan"
+        src: "ChaarChudiyaan"
     },
     
     {
         name: "Excuses",
         artist: "AP Dhillion",
         img: "excuses",
-        src: "Excuses - AP Dhillon"
+        src: "Excuses-APDhillon"
     },
     
     {
         name: "Ghungroo",
         artist: "Arijit Singh",
         img: "ghungroo",
-        src: "Ghungroo - WAR"
+        src: "Ghungroo-WAR"
     },
     
     {
         name: "Growing Old With You",
         artist: "Restless Road",
         img: "growingoldwithyou",
-        src: "Restless Road - Growing Old With You"
+        src: "RestlessRoad-GrowingOldWithYou"
     },
     
     {
         name: "Kesariya",
         artist: "Arijit Singh",
         img: "kesariya",
-        src: "Kesariya - Official"
+        src: "Kesariya-Official"
     },
 
     {
         name: "Laare",
         artist: "Maninder Buttar",
         img: "laare",
-        src: "Laare - Maninder Buttar"
+        src: "Laare-ManinderButtar"
     },
 
     {
         name: "Maiyya Mainu",
         artist: "Sachet, Parampara",
         img: "maiyyamainu",
-        src: "Maiyya Mainu - Jersey"
+        src: "MaiyyaMainu-Jersey"
     },
 
     {
         name: "Makhna",
         artist: "Tanishk Bagchi, Asees Kaur",
         img: "makhna",
-        src: "Makhna - Drive"
+        src: "Makhna-Drive"
     },
 
     {
         name: "Maan Meri Jaan",
         artist: "King",
         img: "maanmerijaan",
-        src: "KING - MAAN MERI JAAN"
+        src: "KING-MAANMERIJAAN"
     },
 
     {
         name: "Mere Yaara",
         artist: "Arijit Singh, Neeti Mohan",
         img: "mereyaara",
-        src: "Sooryavanshi_Mere Yaara"
+        src: "Sooryavanshi_MereYaara"
     },
 
     {
         name: "Naino Ne Baandhi",
         artist: "Arko, Yasser Desai",
         img: "nainonebaandhi",
-        src: "Naino Ne Baandhi - Gold"
+        src: "NainoNeBaandhi-Gold"
     },
 
     {
         name: "Night Changes",
         artist: "One Direction",
         img: "nightchanges",
-        src: "One Direction - Night Changes"
+        src: "OneDirection-NightChanges"
     },
 
     {
         name: "Perfect Duet(With Beyoncè)",
         artist: "Ed Sheeran",
         img: "perfect",
-        src: "Ed Sheeran - Perfect Duet (with Beyoncé)"
+        src: "EdSheeran-PerfectDuetwithBeyoncé"
     },
 
     {
         name: "Rabba",
         artist: "Mohit Chauhan",
         img: "rabba",
-        src: "Heropanti_ Rabba"
+        src: "Heropanti_Rabba"
     },
     
     {
         name: "Rasiya",
         artist: "Shreya Ghoshal, Tushar Joshi",
         img: "rasiya",
-        src: "Rasiya - Brahmastra"
+        src: "Rasiya-Brahmastra"
     },
     
     {
         name: "SummerThing!",
         artist: "Afrojack",
         img: "summerthing",
-        src: "Afrojack - SummerThing! ft. Mike Taylor"
+        src: "Afrojack-SummerThingftMikeTaylor"
     },
     
     {
         name: "Until I Found You(Em Beihold Version)",
         artist: "Stephen Sanchez",
         img: "untilifoundyou",
-        src: "Until I Found You"
+        src: "UntilIFoundYou"
     },
 
     {
         name: "Yaara Tere Warga",
         artist: "Jass Manak",
         img: "yaaraterewarga",
-        src: "Yaara Tere Warga - Jass Manak"
+        src: "YaaraTereWarga-JassManak"
     }    
 ]
