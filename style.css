@@ -26,6 +26,8 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: #DF7EA2;
+    background-image: linear-gradient(#DF7EA2, #7c5773);
 }
 
 .wrapper{
@@ -33,7 +35,7 @@ body{
     overflow: hidden;
     position: relative;
     border-radius: 15px;
-    padding: 25px 30px;
+    padding: 12px 30px;
     background-color: var(--white);
     box-shadow: 0px 6px 15px var(--lightbshadow);
 }

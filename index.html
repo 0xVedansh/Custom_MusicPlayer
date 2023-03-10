@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Music Player</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
@@ -13,6 +15,11 @@
 
 </head>
 <body>
+    <div class="button">
+        <div class="center">
+            <input type="checkbox">
+        </div>
+    </div>
     <div class="wrapper">
         <div class="top-bar">
             <i class="material-icons">expand_more</i>
@@ -71,5 +78,13 @@
    
     <script src="js/music-list.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input').click(function(){
+                $('body').toggleClass('active');
+                $('.button').toggleClass('check');
+            });
+        });
+    </script>
 </body>
 </html>

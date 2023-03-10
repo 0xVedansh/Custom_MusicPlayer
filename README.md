@@ -1,10 +1,6 @@
 # Custom_MusicPlayer
 
-For Best View, Use FullScreen 
-
-
-
-
+Added Animated Dark-Mode Button for easy-using at night! 
 
 
 

@@ -1,0 +1,77 @@
+body{
+    transition: 0.5s ease;
+}
+
+.button{
+    position: absolute;
+    right: 580px;
+    top: 25px;
+    transform: translateY(-50%);
+    background: #f2f2f2;
+    height: 35px;
+    width: 130px;
+    border-radius: 5px;
+}
+
+.button::before{
+    position: absolute;
+    content: "Disabled";
+    right: 8px;
+    color: black;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    height: 24px;
+    width: 48px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.center input{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #e6e6e6;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 24px;
+    width: 24px;
+    border-radius: 20px;
+    background: linear-gradient(#fff, #f2f2f2, #e6e6e6, #d9d9d9);
+    transform: scale(0.85);
+    transition: 0.5s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:checked{
+    background: #00d2e6;
+}
+
+input:checked::before{
+    left: 24px;
+}
+
+.button.check::before{
+    content: "Enabled";
+    color: black;
+}
+
+.active{
+    background: #1a1a1a;
+    color: white;
+}
